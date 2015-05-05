@@ -14,11 +14,9 @@ $fhandle = fopen($fname, 'w') or die ("Невозможно открыть фа�
 $user_name = "Имя - " . $_POST["user_name"];
 fwrite($fhandle, $user_name);
 fclose($fhandle);
-/*$user_name = file('Values.txt');
-foreach($user_name as $line1)
-{
-    echo $line1 . "<br/>\n";
-};*/
+$fhandle = fopen($fname, 'r');
+$name = fread($fhandle, filesize($fname));
+fclose($fhandle);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -30,7 +28,7 @@ foreach($user_name as $line1)
 <form method="post" action="/index.php">Наносайт для передачи информации:
     <br>
     <br>
-    Имя пользователя: <input name="user_name" type="text" maxlength="7" size="25" value=<?php echo $_POST["user_name"] ?>>
+    Имя пользователя: <input name="user_name" type="text" maxlength="7" size="25" value=<?php echo $name; ?>>
     <br>
     <br>
     <input type=submit value="Сохранить">
