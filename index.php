@@ -30,10 +30,11 @@ foreach($user_name as $line1)
 <form method="post" action="http://localhost:9999/index.php">Наносайт для передачи информации:
     <br>
     <br>
-    Имя пользователя: <input name="user_name" type="text" maxlength="7" size="25" value=<?php echo $_POST["user_name"] ?>>
+    Имя пользователя: <input name="user_name" type="text" maxlength="7" size="25" value=<?php echo $_POST["user_name"] ?>/>
     <br>
     <br>
-    <input type=submit value="Сохранить">
+    <input type=submit value="Сохранить"/>
 </form>
+<img src="http://avatars-fast.yandex.net/get-direct/6Oubd7Va58iir2E8hcDthA/y90" alt="Риал Нига" />
 </body>
 </html>
