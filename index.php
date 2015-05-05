@@ -28,7 +28,7 @@ fclose($fhandle);
 <form method="post" action="/index.php">Наносайт для передачи информации:
     <br>
     <br>
-    Имя пользователя: <input name="user_name" type="text" maxlength="7" size="25" value=<?php echo $name; ?>>
+    Имя пользователя: <input name="user_name" type="text" maxlength="7" size="25" value="<?php echo $name; ?>">
     <br>
     <br>
     <input type=submit value="Сохранить">
