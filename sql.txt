@@ -19,7 +19,7 @@ DELETE FROM testuser WHERE id = 'lev';
 
 SELECT * FROM testuser;
 
-Таблица покупок, содержит id, тип, название, примечание, количество.
+РўР°Р±Р»РёС†Р° РїРѕРєСѓРїРѕРє, СЃРѕРґРµСЂР¶РёС‚ id, С‚РёРї, РЅР°Р·РІР°РЅРёРµ, РїСЂРёРјРµС‡Р°РЅРёРµ, РєРѕР»РёС‡РµСЃС‚РІРѕ.
 
 CREATE table Shopping_list (
   id integer not null default nextval ('Shopping_list_id_seq'),
@@ -29,11 +29,11 @@ CREATE table Shopping_list (
   note text
 );
 
-insert into Shopping_list (type,name,quantity,measure,note) VALUES ('Мучные изделия', 'Мука хлебопекарная', 3, 'кг', 'Высший сорт');
-INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Мясные изделия', 'Сосиски охотничьи', 20, 'шт', 'Говяжьи');
-INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Мясные изделия', 'Купаты', 1, 'уп', 'Свиниа+говядина');
-INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Овощи', 'Баклажаны', 8, 'шт', 'Отборные');
-INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Фрукты','Манго',6,'шт','Индонезия');
+insert into Shopping_list (type,name,quantity,measure,note) VALUES ('РњСѓС‡РЅС‹Рµ РёР·РґРµР»РёСЏ', 'РњСѓРєР° С…Р»РµР±РѕРїРµРєР°СЂРЅР°СЏ', 3, 'РєРі', 'Р’С‹СЃС€РёР№ СЃРѕСЂС‚');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('РњСЏСЃРЅС‹Рµ РёР·РґРµР»РёСЏ', 'РЎРѕСЃРёСЃРєРё РѕС…РѕС‚РЅРёС‡СЊРё', 20, 'С€С‚', 'Р“РѕРІСЏР¶СЊРё');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('РњСЏСЃРЅС‹Рµ РёР·РґРµР»РёСЏ', 'РљСѓРїР°С‚С‹', 1, 'СѓРї', 'РЎРІРёРЅРёР°+РіРѕРІСЏРґРёРЅР°');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('РћРІРѕС‰Рё', 'Р‘Р°РєР»Р°Р¶Р°РЅС‹', 8, 'С€С‚', 'РћС‚Р±РѕСЂРЅС‹Рµ');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Р¤СЂСѓРєС‚С‹','РњР°РЅРіРѕ',6,'С€С‚','РРЅРґРѕРЅРµР·РёСЏ');
 
 SELECT * FROM Shopping_list;
 
