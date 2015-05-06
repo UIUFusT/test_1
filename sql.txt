@@ -1,0 +1,48 @@
+CREATE SEQUENCE test_id_seq;
+
+create table testuser(
+  id INTEGER NOT NULL default nextval('test_id_seq'),
+  name VARCHAR(32),
+  age INTEGER,
+  text TEXT
+);
+
+
+DROP TABLE testuser;
+
+INSERT INTO testuser (name,age,text) VALUES ('lev',27,'proger');
+INSERT INTO testuser (name,age,text) VALUES ('igor',27,'new proger');
+
+DELETE FROM testuser;
+
+DELETE FROM testuser WHERE id = 'lev';
+
+SELECT * FROM testuser;
+
+Таблица покупок, содержит id, тип, название, примечание, количество.
+
+CREATE table Shopping_list (
+  id integer not null default nextval ('Shopping_list_id_seq'),
+  type varchar (50),
+  name varchar (25),
+  quantity integer,
+  note text
+);
+
+insert into Shopping_list (type,name,quantity,measure,note) VALUES ('Мучные изделия', 'Мука хлебопекарная', 3, 'кг', 'Высший сорт');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Мясные изделия', 'Сосиски охотничьи', 20, 'шт', 'Говяжьи');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Мясные изделия', 'Купаты', 1, 'уп', 'Свиниа+говядина');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Овощи', 'Баклажаны', 8, 'шт', 'Отборные');
+INSERT INTO Shopping_list (type,name,quantity,measure,note) VALUES ('Фрукты','Манго',6,'шт','Индонезия');
+
+SELECT * FROM Shopping_list;
+
+DELETE FROM Shopping_list;
+
+DELETE FROM Shopping_list WHERE id = '1';
+
+DROP TABLE Shopping_list;
+
+CREATE SEQUENCE Shopping_list_id_seq;
+
+ALTER TABLE Shopping_list add column measure VARCHAR(4);
